@@ -169,7 +169,7 @@ file_names = ['data/ML101_KS.csv',
 labels = [1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0]
 image_size = 28
 frame_duration = 1.0
-overlap = 0.5
+overlap = 0.75
 X, y = make_data_pipeline(file_names,labels,image_size,frame_duration,overlap)
 
 from sklearn.model_selection import train_test_split
@@ -192,7 +192,7 @@ from keras.utils import np_utils
 
 batch_size = 128
 num_classes = 2
-epochs = 400
+epochs = 500
 
 # convert class vectors to binary class matrices
 y_train = np_utils.to_categorical(y_train, num_classes)
@@ -205,12 +205,18 @@ model.add(Activation('relu'))
 model.add(Conv2D(32, (3, 3)))
 model.add(Activation('relu'))
 model.add(MaxPooling2D(pool_size=(2, 2)))
-#model.add(Dropout(0.25))
+model.add(Conv2D(32, (3, 3)))
+model.add(Activation('relu'))
+model.add(MaxPooling2D(pool_size=(2, 2)))
+model.add(Conv2D(32, (3, 3)))
+model.add(Activation('relu'))
+model.add(MaxPooling2D(pool_size=(2, 2)))
+model.add(Dropout(0.25))
 
 model.add(Flatten())
 model.add(Dense(10))
 model.add(Activation('relu'))
-#model.add(Dropout(0.5))
+model.add(Dropout(0.5))
 model.add(Dense(num_classes))
 model.add(Activation('softmax'))
 

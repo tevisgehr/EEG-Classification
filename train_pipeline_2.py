@@ -192,7 +192,7 @@ from keras.utils import np_utils
 
 batch_size = 128
 num_classes = 2
-epochs = 400
+epochs = 500
 
 # convert class vectors to binary class matrices
 y_train = np_utils.to_categorical(y_train, num_classes)
@@ -202,6 +202,12 @@ y_test = np_utils.to_categorical(y_test, num_classes)
 model = Sequential()
 model.add(Conv2D(32, (3, 3), padding='same',input_shape=input_shape))
 model.add(Activation('relu'))
+model.add(Conv2D(32, (3, 3)))
+model.add(Activation('relu'))
+model.add(MaxPooling2D(pool_size=(2, 2)))
+model.add(Conv2D(32, (3, 3)))
+model.add(Activation('relu'))
+model.add(MaxPooling2D(pool_size=(2, 2)))
 model.add(Conv2D(32, (3, 3)))
 model.add(Activation('relu'))
 model.add(MaxPooling2D(pool_size=(2, 2)))
