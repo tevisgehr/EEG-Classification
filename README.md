@@ -5,3 +5,19 @@ This is currently a work in progress. The goal is to use a combined CNN-RNN arch
 
 #### Learning Representations from EEG with Deep Recurrent-Convolutional Neural Networks  
 Pouya Bashivan, Irina Rish, Mohammed Yeasin, Noel Codella - 2016
+
+
+## Introduction 
+Intro  
+
+## The Data  
+Description of the data
+
+## Data Processing  
+Desctipiton of data processing  
+
+## Tiers
+
+## Results and Discussion
+
+## Citations
