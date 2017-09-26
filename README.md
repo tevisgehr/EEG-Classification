@@ -5,7 +5,7 @@
 [image3]: ./Pictures/hanning.png "hanning"
 [image4]: ./Pictures/one-second-wave-n-fft.png "one-second-wave-n-fft"
 [image5]: ./Pictures/projections.png "projections"
-[image6]: ./Pictures/waveform-and-fft.png "waveform-and-fft"
+[image6]: ./Pictures/four_channels.png "four_channels"
 
 
 # EEG-Classification
