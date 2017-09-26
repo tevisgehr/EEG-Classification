@@ -24,7 +24,7 @@ Secondary goals include providing insight into which brain regions and frequency
 ## The Data  
 The data are in the form of csv files with raw waveform signals from 14 probes places around the scalp. The sampling rate is 128 hz, which allows for frequency analysis up to ~60 hz. Each of 8 subjects participated in two 1 minute sessions. Therefore the total number of datapoints is on the order of 14x128x60x8x2 = 1,720,320. Several additional subjects are expected to perform recording sessions during the next few weeks. 
 
-The image below shows the raw waveform data from a typical session. EMG signals (such as those causes by swallowing or yawning) were manually removed.
+The image below shows the raw waveform data from four of the 14 channels during a typical session. EMG signals (such as those causes by swallowing or yawning) were manually removed.
 ![alt text][image6]
 
 ## Tiers
