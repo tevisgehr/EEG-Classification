@@ -1,7 +1,7 @@
 [//]: # (Image References)
 
 [image1]: ./Pictures/keras_summary.png "keras_summary"
-[image2]: eeg_learn_overview_architecture.png "eeg_learn_overview_architecture"
+[image2]: ./Pictures/eeg_learn_overview_architecture.png "eeg_learn_overview_architecture"
 [image3]: ./Pictures/hanning.png "hanning"
 [image4]: ./Pictures/one-second-wave-n-fft.png "one-second-wave-n-fft"
 [image5]: ./Pictures/projections.png "projections"
@@ -19,6 +19,7 @@ This is currently a work in progress. The goal is to use a combined CNN-RNN arch
 ![alt text][image4]
 ![alt text][image5]
 ![alt text][image6]
+
 ## Introduction 
 The goal of this project is to classify brain states from EEG data. A joint CU Anschutz/ULN project has collected EEG data on subjects during sessions in which the subjects were instructed to visualize performing a motor-based task. Each subject performed one session visualizing a very familiar task, and another session visualizing an unfamiliar task. The primary goal is to develop a classifier that can correctly identify whether a subject is visualizing a task that is familiar or unfamiliar.   
 
