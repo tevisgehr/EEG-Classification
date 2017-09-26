@@ -1,18 +1,24 @@
 [//]: # (Image References)
 
-[image1]: ./Pictures/keras_summary.png "Keras Summary"
-[image3]: ./h-channel.png "H-Channel"
-[image4]: ./s-channel.png "S-Channel"
-[image5]: ./v-channel.png "V-Channel"
-[image6]: ./hist1.png "Steering Angle Distribution"
-[image7]: ./hist2.png "After Flipping"
+[image1]: ./Pictures/keras_summary.png "keras_summary"
+[image2]: eeg_learn_overview_architecture.png "eeg_learn_overview_architecture"
+[image3]: ./Pictures/hanning.png "hanning"
+[image4]: ./Pictures/one-second-wave-n-fft.png "one-second-wave-n-fft"
+[image5]: ./Pictures/projections.png "projections"
+[image6]: ./Pictures/waveform-and-fft.png "waveform-and-fft"
+
 
 # EEG-Classification
 This project was a joint effort with neurology labs at UNL and UCD Anschutz to use deep learning to classify EEG data.
 
 This is currently a work in progress. The goal is to use a combined CNN-RNN architecture to perserve both spaical and time information in the classification of EEG data. 
 
-[image1]
+![alt text][image1]
+![alt text][image2]
+![alt text][image3]
+![alt text][image4]
+![alt text][image5]
+![alt text][image6]
 ## Introduction 
 The goal of this project is to classify brain states from EEG data. A joint CU Anschutz/ULN project has collected EEG data on subjects during sessions in which the subjects were instructed to visualize performing a motor-based task. Each subject performed one session visualizing a very familiar task, and another session visualizing an unfamiliar task. The primary goal is to develop a classifier that can correctly identify whether a subject is visualizing a task that is familiar or unfamiliar.   
 
