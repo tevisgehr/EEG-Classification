@@ -1,3 +1,12 @@
+[//]: # (Image References)
+
+[image1]: ./Model_Arcitecture.png "Model Architecture"
+[image3]: ./h-channel.png "H-Channel"
+[image4]: ./s-channel.png "S-Channel"
+[image5]: ./v-channel.png "V-Channel"
+[image6]: ./hist1.png "Steering Angle Distribution"
+[image7]: ./hist2.png "After Flipping"
+
 # EEG-Classification
 This project was a joint effort with neurology labs at UNL and UCD Anschutz to use deep learning to classify EEG data.
 
