@@ -3,7 +3,7 @@
 [image1]: ./Pictures/keras_summary.png "keras_summary"
 [image2]: ./Pictures/eeg_learn_overview_architecture.png "eeg_learn_overview_architecture"
 [image3]: ./Pictures/hanning.png "hanning"
-[image4]: ./Pictures/one-second-wave-n-fft.png "one-second-wave-n-fft"
+[image4]: ./Pictures/one-second-wave-n-fft.png "one-second-wave-n-fft-2"
 [image5]: ./Pictures/projections.png "projections"
 [image6]: ./Pictures/four_channels.png "four_channels"
 
