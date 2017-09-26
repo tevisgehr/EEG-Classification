@@ -1,6 +1,6 @@
 [//]: # (Image References)
 
-[image1]: ./Model_Arcitecture.png "Model Architecture"
+[image1]: ./Pictures/keras_summary.png "Keras Summary"
 [image3]: ./h-channel.png "H-Channel"
 [image4]: ./s-channel.png "S-Channel"
 [image5]: ./v-channel.png "V-Channel"
@@ -12,7 +12,7 @@ This project was a joint effort with neurology labs at UNL and UCD Anschutz to u
 
 This is currently a work in progress. The goal is to use a combined CNN-RNN architecture to perserve both spaical and time information in the classification of EEG data. 
 
-
+[image1]
 ## Introduction 
 The goal of this project is to classify brain states from EEG data. A joint CU Anschutz/ULN project has collected EEG data on subjects during sessions in which the subjects were instructed to visualize performing a motor-based task. Each subject performed one session visualizing a very familiar task, and another session visualizing an unfamiliar task. The primary goal is to develop a classifier that can correctly identify whether a subject is visualizing a task that is familiar or unfamiliar.   
 
