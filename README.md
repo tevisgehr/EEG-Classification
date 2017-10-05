@@ -26,7 +26,7 @@ The data are in the form of csv files with raw waveform signals from 14 probes p
 
 The image below shows the raw waveform data from four of the 14 channels during a typical session. EMG signals (such as those causes by swallowing or yawning) were manually removed.
 ![alt text][image6]
-    Figure 1: Raw waveform data from four of the 14 EEG probes
+   #### Figure 1: Raw waveform data from four of the 14 EEG probes
 
 ## Tiers
 The minimum result required for this project to be a full success is to have developed a classifier that is capable of accurately classifying snippets of EEG session data as being from the visualization of either a familiar or an unfamiliar skill. Because this is a binary classification problem with balanced classes, the minimum baseline for accuracy is 0.5. Full success would mean having an accuracy of at least 70% (although this number is arbitrary). State-of-the-art EEG classification techniques currently score considerably higher than this [1][2]. Data processing and augmentation is expected to be important and multiple approaches will be considered.  
@@ -39,33 +39,45 @@ The  second set of goals center around providing insight into the underlying mec
 Relying on previous EEG research done by Beshivan et. al.[1], as well as the latest advances in video classification[3], the approach was to process the 14-channel time-series data into discreet one-second ‘frames’ and project these frames onto a 2D map of the surface of the head.  Then a convolutional neural network (CNN) was trained to classify frames.  
 
 ![alt text][image2]  
-    Figure 2:EEG classification architecture proposed by [1].
+   #### Figure 2:EEG classification architecture proposed by [1].
 
 ## Data Processing  
 Desciption of data processing.  
 
-Hanning Window
+Hanning Window: First the data were chopped up into overlapping 1-second ‘frames’ and a Hanning window was applied.   
+Fast Fourier Transform(FFT): FFT was applied to transform data for each frame from time domain to frequency domain.   
+Frequency Binning: FFT amplitudes were grouped into theta(4-8Hz), alpha(8-12Hz), and beta(12-40Hz) ranges, giving 3 scalar values for each probe per frame.   
+2D Azimuthal Projection: These 3 values were interpreted as RGB color channels and projected onto a 2D map of the head.  
+
 ![alt text][image3]
-    Figure 3: Hanning windowed one-second frame and FFT.  
+  ####  Figure 3: Hanning windowed one-second frame and FFT.  
 
 Overlapping one-second 'frames'.  
 ![alt text][image4]
-    Figure 4: One 'frame'.
+   #### Figure 4: One 'frame'.
     
     
 Projections  
 ![alt text][image5]  
-    Figure 5: 2D projections of theta, alpha and beta ranges. 
+  ####  Figure 5: 2D projections of theta, alpha and beta ranges. 
     
     
 ## Network Architecture  
-    Table 1: Summary of Convolutional Neural Network in Keras   
+A convolutional neural network was iteratively constructed and tuned to give the best classification accuracy with the data availible. The final architecture is shown below.   
+
+   #### Table 1: Summary of Convolutional Neural Network in Keras   
     
 ![alt text][image1]
     
 
 ## Results and Discussion
+The results obtained are encouraging. Without even using a recurrent neural network (which is the next logical step, see [1]), the CNN is able to correctly classify the test subject’s brain-state about 8.5 times out of 10. This is likely high enough to enable a new level of performance with brain-computer interface (BCI) technologies.   
 
+However, the best results were obtained when the network was trained on samples from the same recording session. While this may be practical for basic brain research, it would be less practical for use in BCI technology.   
+
+The results obtained suggest that while EEG signals do indeed generalize between individuals, there are still significant variations between individuals, which is an unsurprising finding.   
+
+This further suggests that using EEG for BCI will likely require an iterative approach of training on a large population and then fine tuning on a specific individual. It is therefore recommended that future research be done on the possible application of Transfer Learning techniques to the classification of EEG signals.   
 ## Citations
 
 #### [1] Learning Representations from EEG with Deep Recurrent-Convolutional Neural Networks  ####
