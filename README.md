@@ -46,10 +46,14 @@ Relying on previous EEG research done by Beshivan et. al.[1], as well as the lat
 ## Data Processing  
 Desciption of data processing.  
 
-Hanning Window: First the data were chopped up into overlapping 1-second ‘frames’ and a Hanning window was applied.   
+Hanning Window: First the data were chopped up into overlapping 1-second ‘frames’ and a Hanning window was applied.  
+  
 Fast Fourier Transform(FFT): FFT was applied to transform data for each frame from time domain to frequency domain.   
+  
 Frequency Binning: FFT amplitudes were grouped into theta(4-8Hz), alpha(8-12Hz), and beta(12-40Hz) ranges, giving 3 scalar values for each probe per frame.   
-2D Azimuthal Projection: These 3 values were interpreted as RGB color channels and projected onto a 2D map of the head.  
+  
+2D Azimuthal Projection: These 3 values were interpreted as RGB color channels and projected onto a 2D map of the head. 
+  
 
 ![alt text][image3]
   ####  Figure 3: Hanning windowed one-second frame and FFT.  
