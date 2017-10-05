@@ -71,7 +71,7 @@ Projections
 ## Network Architecture  
 A convolutional neural network was iteratively constructed and tuned to give the best classification accuracy with the data availible. The final architecture is shown below.   
 
-   #### Table 1: Summary of Convolutional Neural Network in Keras   
+#### Table 1: Summary of Convolutional Neural Network in Keras   
     
 ![alt text][image1]
     
