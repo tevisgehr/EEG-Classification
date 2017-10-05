@@ -11,7 +11,7 @@
 # EEG-Classification
 This project is a joint effort with neurology labs at UNL and UCD Anschutz to use deep learning to classify EEG data.
 
-This is currently a work in progress. The goal is to use various data processing techniques and deep neural network architectures to perserve both spacial and time information in the classification of EEG data. 
+The goal is to use various data processing techniques and deep neural network architectures to perserve both spacial and time information in the classification of EEG data. 
 
 
 
@@ -54,7 +54,7 @@ Overlapping one-second 'frames'.
     
     
 Projections  
-![alt text][image5]
+![alt text][image5]  
     Figure 5: 2D projections of theta, alpha and beta ranges. 
     
     
