@@ -13,7 +13,7 @@ This project is a joint effort with neurology labs at UNL and UCD Anschutz to us
 
 The goal is to use various data processing techniques and deep neural network architectures to perserve both spacial and time information in the classification of EEG data. 
 
-
+For a more concise and visually pleasing presentation of this project, please see the included PDF. (galvanize_36x48_Tevis_Gehr_EEG_2.pdf)
 
 ## Introduction 
 An electroencephalogram (EEG) is a test that detects electrical activity in your brain using small, flat metal discs (electrodes) attached to your scalp. Your brain cells communicate via electrical impulses and are active all the time, even when you're asleep. This activity shows up as wavy lines on an EEG recording. [Mayo Clinic]  
@@ -44,15 +44,15 @@ Relying on previous EEG research done by Beshivan et. al.[1], as well as the lat
    #### Figure 2:EEG classification architecture proposed by [1].
 
 ## Data Processing  
-Desciption of data processing.  
+Following is a desciption of data processing techniques used in this project.  
 
-Hanning Window: First the data were chopped up into overlapping 1-second ‘frames’ and a Hanning window was applied.  
+**Hanning Window:** First the data were chopped up into overlapping 1-second ‘frames’ and a Hanning window was applied.  
   
-Fast Fourier Transform(FFT): FFT was applied to transform data for each frame from time domain to frequency domain.   
+**Fast Fourier Transform(FFT):** FFT was applied to transform data for each frame from time domain to frequency domain.   
   
-Frequency Binning: FFT amplitudes were grouped into theta(4-8Hz), alpha(8-12Hz), and beta(12-40Hz) ranges, giving 3 scalar values for each probe per frame.   
+**Frequency Binning:** FFT amplitudes were grouped into theta(4-8Hz), alpha(8-12Hz), and beta(12-40Hz) ranges, giving 3 scalar values for each probe per frame.   
   
-2D Azimuthal Projection: These 3 values were interpreted as RGB color channels and projected onto a 2D map of the head. 
+**2D Azimuthal Projection:** These 3 values were interpreted as RGB color channels and projected onto a 2D map of the head. 
   
 
 ![alt text][image3]
