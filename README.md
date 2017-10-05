@@ -26,6 +26,7 @@ The data are in the form of csv files with raw waveform signals from 14 probes p
 
 The image below shows the raw waveform data from four of the 14 channels during a typical session. EMG signals (such as those causes by swallowing or yawning) were manually removed.
 ![alt text][image6]
+    Figure 1: Raw waveform data from four of the 14 EEG probes
 
 ## Tiers
 The minimum result required for this project to be a full success is to have developed a classifier that is capable of accurately classifying snippets of EEG session data as being from the visualization of either a familiar or an unfamiliar skill. Because this is a binary classification problem with balanced classes, the minimum baseline for accuracy is 0.5. Full success would mean having an accuracy of at least 70% (although this number is arbitrary). State-of-the-art EEG classification techniques currently score considerably higher than this [1][2]. Data processing and augmentation is expected to be important and multiple approaches will be considered.  
@@ -38,23 +39,30 @@ The  second set of goals center around providing insight into the underlying mec
 Relying on previous EEG research done by Beshivan et. al.[1], as well as the latest advances in video classification[3], the approach was to process the 14-channel time-series data into discreet one-second ‘frames’ and project these frames onto a 2D map of the surface of the head.  Then a convolutional neural network (CNN) was trained to classify frames.  
 
 ![alt text][image2]  
-Figure 1:EEG classification architecture proposed by [1].
+    Figure 2:EEG classification architecture proposed by [1].
 
 ## Data Processing  
 Desciption of data processing.  
 
 Hanning Window
 ![alt text][image3]
+    Figure 3: Hanning windowed one-second frame and FFT.  
 
 Overlapping one-second 'frames'.  
 ![alt text][image4]
-
+    Figure 4: One 'frame'.
+    
+    
 Projections  
 ![alt text][image5]
-
-## Network Architecture
-
+    Figure 5: 2D projections of theta, alpha and beta ranges. 
+    
+    
+## Network Architecture  
+    Table 1: Summary of Convolutional Neural Network in Keras   
+    
 ![alt text][image1]
+    
 
 ## Results and Discussion
 
@@ -68,3 +76,8 @@ https://arxiv.org/abs/1511.06448
 #### [2] A novel deep learning approach for classification of EEG motor imagery signals   ####
 30 Nov 2016. Tabar and Halici. IOP Publishing.   
 http://iopscience.iop.org/article/10.1088/1741-2560/14/1/016003/meta
+
+
+#### [3] Beyond Short Snippets: Deep Networks for Video Classification
+13 Apr 2015. Ng et al. Cornell University Library.  
+https://arxiv.org/abs/1503.08909
