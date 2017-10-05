@@ -35,8 +35,10 @@ Once a viable classifier has been developed, the goals are twofold. First to use
 The  second set of goals center around providing insight into the underlying mechanisms in brain function. The methods for accomplishment of these goals will depend on the details of the machine learning algorithms that are able to successfully classify the EEG data.   
 
 ## Approach
-EEGLearn - discuss
-![alt text][image2]
+Relying on previous EEG research done by Beshivan et. al.[1], as well as the latest advances in video classification[3], the approach was to process the 14-channel time-series data into discreet one-second ‘frames’ and project these frames onto a 2D map of the surface of the head.  Then a convolutional neural network (CNN) was trained to classify frames.  
+
+![alt text][image2]  
+Figure 1:EEG classification architecture proposed by [1].
 
 ## Data Processing  
 Desciption of data processing.  
